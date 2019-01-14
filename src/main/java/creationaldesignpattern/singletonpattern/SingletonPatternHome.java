@@ -29,7 +29,7 @@ public class SingletonPatternHome {
             sta = connection.createStatement();
             sta.executeUpdate("CREATE TABLE Address6(ID INT, City VARCHAR(20))");//"+"City VARCHAR(20))");
            // sta.executeUpdate("INSERT INTO Address6 VALUES (12,'GZB')");
-            System.out.println("table craeted successfully");
+            System.out.println("table created successfully");
             sta.close();
         } catch (SQLException ex) {
             ex.printStackTrace();
