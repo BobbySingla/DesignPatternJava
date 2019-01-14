@@ -1,4 +1,4 @@
-package creationaldesignpattern;
+package creationaldesignpattern.singletonpattern;
 
 public class SingletonPatternEasy {
     //Early Instantiation
