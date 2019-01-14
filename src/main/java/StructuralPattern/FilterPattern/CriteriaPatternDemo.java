@@ -11,7 +11,6 @@ public class CriteriaPatternDemo {
         persons.add(new Person("Laura", "Female", "Married"));
         persons.add(new Person("Diana", "Female", "Single"));
         persons.add(new Person("Mike", "Male", "Single"));
-        persons.add(new Person("Bobby", "Male", "Single"));
 
         Criteria male = new CriteriaMale();
         Criteria female = new CriteriaFemale();
