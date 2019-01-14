@@ -1,5 +1,4 @@
 package StructuralPattern.AdapterPattern;
-
 public class MediaAdapter implements MediaPlayer{
     AdvancedMediaPlayer advancedMediaPlayer;
     public MediaAdapter(String audioType){
