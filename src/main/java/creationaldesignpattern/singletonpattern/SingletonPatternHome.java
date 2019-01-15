@@ -31,17 +31,17 @@ public class SingletonPatternHome {
             int sql = sta.executeUpdate("INSERT INTO Address VALUES " + "(1,'GZB')");
             int sql1 = sta.executeUpdate("INSERT INTO Address VALUES " + "(2,'UP')");
             int sql2 = sta.executeUpdate("INSERT INTO Address VALUES " + "(3,'Noida')");
-           // System.out.println("table created successfully");
+            // System.out.println("table created successfully");
             String sql4 = "SELECT * FROM Address";
             ResultSet rs = sta.executeQuery(sql4);
-            while(rs.next()){
-                int id  = rs.getInt("ID");
+            while (rs.next()) {
+                int id = rs.getInt("ID");
                 String city = rs.getString("City");
                 System.out.print("ID: " + id);
                 System.out.print(", City: " + city);
                 System.out.println();
-                }
-                sta.close();
+            }
+            sta.close();
 
         } catch (SQLException ex) {
             ex.printStackTrace();
