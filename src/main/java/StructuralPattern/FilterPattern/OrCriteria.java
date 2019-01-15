@@ -1,7 +1,6 @@
 package StructuralPattern.FilterPattern;
 
 import java.util.List;
-
 public class OrCriteria implements Criteria {
     private Criteria criteria;
     private Criteria criteria1;

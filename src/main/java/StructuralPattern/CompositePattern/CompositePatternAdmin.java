@@ -11,10 +11,10 @@ public class CompositePatternAdmin {
         HeadManager.add(Manager);
         HeadManager.add(Manager1);
         for (Employee employee : CEO.getSubordinates()) {
+            System.out.println(employee);
             for (Employee employee1 : HeadManager.getSubordinates()) {
                 System.out.println(employee1);
             }
-            System.out.println(employee);
         }
     }
 }

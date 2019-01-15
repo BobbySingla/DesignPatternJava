@@ -23,16 +23,29 @@ public class SingletonPatternHome {
         Connection connection = instance2.getConnection();
         long endtime = System.currentTimeMillis();
         System.out.println("Time taken to connect to database : " + (endtime - starttime) + " millisecoonds ");
-        Statement sta;
-        ResultSet rst;
+        Statement sta = null;
+        ResultSet rst = null;
         try {
             sta = connection.createStatement();
-            sta.executeUpdate("CREATE TABLE Address6(ID INT, City VARCHAR(20))");//"+"City VARCHAR(20))");
-           // sta.executeUpdate("INSERT INTO Address6 VALUES (12,'GZB')");
-            System.out.println("table created successfully");
-            sta.close();
+            //sta.executeUpdate("CREATE TABLE Address(ID INTEGER , City VARCHAR(20))");//"+"City VARCHAR(20))");
+            int sql = sta.executeUpdate("INSERT INTO Address VALUES " + "(1,'GZB')");
+            int sql1 = sta.executeUpdate("INSERT INTO Address VALUES " + "(2,'UP')");
+            int sql2 = sta.executeUpdate("INSERT INTO Address VALUES " + "(3,'Noida')");
+           // System.out.println("table created successfully");
+            String sql4 = "SELECT * FROM Address";
+            ResultSet rs = sta.executeQuery(sql4);
+            while(rs.next()){
+                int id  = rs.getInt("ID");
+                String city = rs.getString("City");
+                System.out.print("ID: " + id);
+                System.out.print(", City: " + city);
+                System.out.println();
+                }
+                sta.close();
+
         } catch (SQLException ex) {
             ex.printStackTrace();
+
         }
     }
 }
